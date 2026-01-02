@@ -220,7 +220,7 @@ export default function HomePage() {
           {/* Mahjong */}
           <div className="flex h-full flex-col">
             <div>
-              <h3 className="text-sm font-semibold text-gray-900">Mahjong</h3>
+              <h3 className="text-sm font-semibold text-gray-900">Mahjong Scores</h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-700">
                 Een interactief project ontstaan vanuit de behoefte om
                 Mahjong-scores bij te houden zonder te werken met fiches. Het
