@@ -1,32 +1,24 @@
 // app/wfm-case-study/page.tsx
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { SiteHeader } from '../components/SiteHeader'
+import { SiteFooter } from '../components/SiteFooter'
 
 export const metadata: Metadata = {
-  title: "WFM case study – Polikliniek | Koen van Gasteren",
+  title: 'WFM case study – Polikliniek | Koen van Gasteren',
   description:
-    "Case study: WFM in de polikliniek. Scenario’s, bevindingen en advies met transparante onderbouwing in een statisch notebook.",
-};
+    'Case study: WFM in de polikliniek. Scenario’s, bevindingen en advies met transparante onderbouwing in een statisch notebook.',
+}
 
 export default function WfmCaseStudyPage() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="mx-auto max-w-5xl px-6 py-6">
-        <nav className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-2xl bg-gray-900" aria-hidden="true" />
-            <div className="leading-tight">
-              <div className="text-sm font-semibold text-gray-900">
-                WFM case study
-              </div>
-              <div className="text-xs text-gray-500">
-                Polikliniek • Scenario’s • Advies • Onderbouwing
-              </div>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2">
+      <SiteHeader
+        title="WFM case study"
+        subtitle="Polikliniek • Scenario’s • Advies • Onderbouwing"
+        href="/wfm-case-study"
+        right={
+          <>
             <Link
               href="/"
               className="rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
@@ -39,9 +31,9 @@ export default function WfmCaseStudyPage() {
             >
               Contact
             </a>
-          </div>
-        </nav>
-      </header>
+          </>
+        }
+      />
 
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 pb-10 pt-4">
@@ -99,7 +91,9 @@ export default function WfmCaseStudyPage() {
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-white p-4">
-              <div className="text-xs font-semibold text-gray-500">Capaciteit</div>
+              <div className="text-xs font-semibold text-gray-500">
+                Capaciteit
+              </div>
               <div className="mt-1 text-sm font-semibold text-gray-900">
                 2 artsen + 1 PA/VS
               </div>
@@ -151,8 +145,8 @@ export default function WfmCaseStudyPage() {
                 3) Grenzen & interpretatie
               </div>
               <p className="mt-2 text-sm leading-relaxed text-gray-700">
-                Dit is een theoretische case (met gesimuleerde data). Het doel is
-                een denkkader laten zien, geen blauwdruk voor iedere poli.
+                Dit is een theoretische case (met gesimuleerde data). Het doel
+                is een denkkader laten zien, geen blauwdruk voor iedere poli.
               </p>
             </div>
           </div>
@@ -175,7 +169,7 @@ export default function WfmCaseStudyPage() {
             <p className="mt-3 text-sm leading-relaxed text-gray-700">
               <span className="font-semibold text-gray-900">
                 Centrale vraag:
-              </span>{" "}
+              </span>{' '}
               hoe richt je planning en inzet zo in dat je een werkbare dag
               organiseert, met voorspelbare belasting voor medewerkers en
               betrouwbare toegang voor patiënten?
@@ -233,8 +227,8 @@ export default function WfmCaseStudyPage() {
               </div>
               <p className="mt-2 text-sm leading-relaxed text-gray-700">
                 Minder buffer betekent hogere benutting, maar ook meer kans op
-                wachtrijen en uitloop. Dit vertaalt zich direct naar roosterstress
-                en ad-hoc bijsturen.
+                wachtrijen en uitloop. Dit vertaalt zich direct naar
+                roosterstress en ad-hoc bijsturen.
               </p>
             </div>
 
@@ -256,7 +250,9 @@ export default function WfmCaseStudyPage() {
       <section className="mx-auto max-w-5xl px-6 pb-10">
         <div className="grid gap-4 md:grid-cols-3">
           <div className="rounded-3xl border border-gray-200 bg-white p-7 shadow-sm">
-            <div className="text-xs font-semibold text-gray-500">Scenario A</div>
+            <div className="text-xs font-semibold text-gray-500">
+              Scenario A
+            </div>
             <h3 className="mt-2 text-lg font-semibold text-gray-900">
               Strak plannen
             </h3>
@@ -268,7 +264,9 @@ export default function WfmCaseStudyPage() {
           </div>
 
           <div className="rounded-3xl border border-gray-200 bg-white p-7 shadow-sm">
-            <div className="text-xs font-semibold text-gray-500">Scenario B</div>
+            <div className="text-xs font-semibold text-gray-500">
+              Scenario B
+            </div>
             <h3 className="mt-2 text-lg font-semibold text-gray-900">
               Werkbaar plannen
             </h3>
@@ -280,7 +278,9 @@ export default function WfmCaseStudyPage() {
           </div>
 
           <div className="rounded-3xl border border-gray-200 bg-white p-7 shadow-sm">
-            <div className="text-xs font-semibold text-gray-500">Scenario C</div>
+            <div className="text-xs font-semibold text-gray-500">
+              Scenario C
+            </div>
             <h3 className="mt-2 text-lg font-semibold text-gray-900">
               Slimme buffer
             </h3>
@@ -348,9 +348,15 @@ export default function WfmCaseStudyPage() {
             </div>
             <ul className="mt-3 space-y-2 text-sm text-gray-700">
               <li>• Inventariseer instroom, no-show en uitloop per dagdeel.</li>
-              <li>• Spreek “acceptabele werkdag” en “acceptabele wachttijd” af.</li>
-              <li>• Test één scenario op kleine schaal en evalueer met het team.</li>
-              <li>• Maak bijsturen onderdeel van het dagritme (niet ad-hoc).</li>
+              <li>
+                • Spreek “acceptabele werkdag” en “acceptabele wachttijd” af.
+              </li>
+              <li>
+                • Test één scenario op kleine schaal en evalueer met het team.
+              </li>
+              <li>
+                • Maak bijsturen onderdeel van het dagritme (niet ad-hoc).
+              </li>
             </ul>
           </div>
         </div>
@@ -389,22 +395,21 @@ export default function WfmCaseStudyPage() {
                 →
               </span>
             </a>
-
           </div>
 
           <div className="mt-6 rounded-2xl border border-gray-200 bg-gray-50 p-6 text-sm text-gray-700">
             <div className="font-semibold text-gray-900">Disclaimer</div>
             <p className="mt-2 leading-relaxed">
-              Dit is een theoretische case met gesimuleerde data. Het doel is het
-              denkkader laten zien waarmee je keuzes expliciet maakt (buffers,
-              werkbaarheid, voorspelbaarheid), niet een generieke blauwdruk voor
-              alle poliklinieken.
+              Dit is een theoretische case met gesimuleerde data. Het doel is
+              het denkkader laten zien waarmee je keuzes expliciet maakt
+              (buffers, werkbaarheid, voorspelbaarheid), niet een generieke
+              blauwdruk voor alle poliklinieken.
             </p>
           </div>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="text-sm text-gray-600">
-              Vragen of sparren?{" "}
+              Vragen of sparren?{' '}
               <a
                 href="mailto:gasteren@gmail.com"
                 className="font-semibold text-gray-900 underline underline-offset-4 hover:text-gray-700"
@@ -414,26 +419,17 @@ export default function WfmCaseStudyPage() {
               .
             </div>
 
-            <Link href="/" className="text-sm font-semibold text-gray-900 hover:text-gray-700">
+            <Link
+              href="/"
+              className="text-sm font-semibold text-gray-900 hover:text-gray-700"
+            >
               ← Terug naar home
             </Link>
           </div>
         </div>
       </section>
 
-      <footer className="border-t border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-5xl flex-col gap-2 px-6 py-8 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} Koen van Gasteren</div>
-          <div className="flex gap-4">
-            <Link href="/" className="hover:text-gray-900">
-              Home
-            </Link>
-            <a href="mailto:gasteren@gmail.com" className="hover:text-gray-900">
-              gasteren@gmail.com
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
-  );
+  )
 }

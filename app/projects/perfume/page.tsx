@@ -1,62 +1,17 @@
 // app/projects/perfume/page.tsx
 import Link from "next/link";
-
-function Container({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8">
-      {children}
-    </div>
-  );
-}
-
-function Section({
-  id,
-  title,
-  kicker,
-  children,
-}: {
-  id?: string;
-  title: string;
-  kicker?: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <section id={id} className="scroll-mt-24">
-      <div className="space-y-2">
-        {kicker ? (
-          <p className="text-sm font-medium text-muted-foreground">{kicker}</p>
-        ) : null}
-        <h2 className="text-xl font-semibold tracking-tight sm:text-2xl">
-          {title}
-        </h2>
-      </div>
-      <div className="mt-4">{children}</div>
-    </section>
-  );
-}
-
-function Card({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  return (
-    <div
-      className={[
-        "rounded-2xl border border-border bg-card text-card-foreground shadow-sm",
-        className,
-      ].join(" ")}
-    >
-      {children}
-    </div>
-  );
-}
+import { SiteHeader } from "@/app/components/SiteHeader";
+import { Container } from "@/app/components/layout/Container";
+import { Section } from "@/app/components/layout/Section";
+import { Card } from "@/app/components/layout/Card";
+import { ButtonLink } from "@/app/components/ui/ButtonLink";
+import { HomeAndContactActions } from "@/app/components/header/HeaderActions";
+import { SiteFooter } from "@/app/components/SiteFooter";
 
 export default function PerfumeProjectPage() {
   return (
     <main className="py-10 sm:py-14">
+      <SiteHeader right={<HomeAndContactActions />} />      
       <Container>
         {/* Hero */}
         <header className="space-y-6">
@@ -75,18 +30,18 @@ export default function PerfumeProjectPage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3">
-            <Link
+            <ButtonLink
               href="https://perfume.koenvangasteren.nl"
               className="inline-flex items-center justify-center rounded-xl bg-foreground px-4 py-2 text-sm font-medium text-background hover:opacity-90"
             >
               Bekijk de app
-            </Link>
-            <Link
+            </ButtonLink>
+            <ButtonLink
               href="https://github.com/KvGasteren/perfumeapp"
               className="inline-flex items-center justify-center rounded-xl border border-border px-4 py-2 text-sm font-medium hover:bg-accent"
             >
               Bekijk de code
-            </Link>
+            </ButtonLink>
           </div>
 
           <Card className="p-5 sm:p-6">
@@ -260,6 +215,7 @@ export default function PerfumeProjectPage() {
           </Section>
         </div>
       </Container>
+      <SiteFooter />
     </main>
   );
 }

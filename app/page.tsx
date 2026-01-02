@@ -1,6 +1,8 @@
 // app/page.tsx
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { SiteHeader } from './components/SiteHeader'
+import { SiteFooter } from './components/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Koen van Gasteren',
@@ -12,23 +14,8 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Top bar */}
-      <header className="mx-auto max-w-5xl px-6 py-6">
-        <nav className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div
-              className="h-9 w-9 rounded-2xl bg-gray-900"
-              aria-hidden="true"
-            />
-            <div className="leading-tight">
-              <div className="text-sm font-semibold text-gray-900">
-                Koen van Gasteren
-              </div>
-              <div className="text-xs text-gray-500">
-                Analyse • Organisatie • Software
-              </div>
-            </div>
-          </div>
-
+      <SiteHeader
+        right={
           <div className="hidden items-center gap-2 sm:flex">
             <Link
               href="/wfm-case-study"
@@ -37,8 +24,8 @@ export default function HomePage() {
               Bekijk WFM case study
             </Link>
           </div>
-        </nav>
-      </header>
+        }
+      />
 
       {/* Hero (ANCHOR CARD) */}
       <section className="mx-auto max-w-5xl px-6 py-10">
@@ -220,7 +207,9 @@ export default function HomePage() {
           {/* Mahjong */}
           <div className="flex h-full flex-col">
             <div>
-              <h3 className="text-sm font-semibold text-gray-900">Mahjong Scores</h3>
+              <h3 className="text-sm font-semibold text-gray-900">
+                Mahjong Scores
+              </h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-700">
                 Een interactief project ontstaan vanuit de behoefte om
                 Mahjong-scores bij te houden zonder te werken met fiches. Het
@@ -242,19 +231,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="border-t border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-5xl flex-col gap-2 px-6 py-8 text-sm text-gray-600 sm:flex-row sm:items-center sm:justify-between">
-          <div>© {new Date().getFullYear()} Koen van Gasteren</div>
-          <div className="flex gap-4">
-            <Link href="/wfm-case-study" className="hover:text-gray-900">
-              WFM case study
-            </Link>
-            <a href="mailto:gasteren@gmail.com" className="hover:text-gray-900">
-              gasteren@gmail.com
-            </a>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </main>
   )
 }
