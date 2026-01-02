@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Koen van Gasteren',
   description:
-    'Koen van Gasteren — WFM, data-analyse en softwareontwikkeling. Case study: WFM in de polikliniek.',
+    'Koen van Gasteren — analyse, organisatie en software. Case study: WFM in de polikliniek.',
 }
 
 export default function HomePage() {
@@ -24,7 +24,7 @@ export default function HomePage() {
                 Koen van Gasteren
               </div>
               <div className="text-xs text-gray-500">
-                WFM • Data-analyse • Softwareontwikkeling
+                Analyse • Organisatie • Software
               </div>
             </div>
           </div>
@@ -40,8 +40,8 @@ export default function HomePage() {
         </nav>
       </header>
 
-      {/* Hero */}
-      <section className="mx-auto max-w-5xl px-6 pb-10 pt-6">
+      {/* Hero (ANCHOR CARD) */}
+      <section className="mx-auto max-w-5xl px-6 py-10">
         <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm">
           <div className="max-w-2xl">
             <p className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-medium text-gray-700">
@@ -98,10 +98,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What I do */}
-      <section className="mx-auto max-w-5xl px-6 pb-8">
-        <div className="grid gap-4 md:grid-cols-3">
-          <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+      {/* What I do (EDITORIAL BLOCKS, no cards) */}
+      <section className="mx-auto max-w-5xl px-6 py-10">
+        <div className="grid gap-10 md:grid-cols-3">
+          <div>
             <h2 className="text-sm font-semibold text-gray-900">Analyse</h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">
               Instroom, variatie, consultduur, no-shows en uitloop vertalen naar
@@ -109,7 +109,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div>
             <h2 className="text-sm font-semibold text-gray-900">Advies</h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">
               Keuzes expliciet maken: buffers, werkbaarheid, voorspelbaarheid en
@@ -117,7 +117,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div>
             <h2 className="text-sm font-semibold text-gray-900">
               Implementatie
             </h2>
@@ -129,8 +129,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured case study */}
-      <section className="mx-auto max-w-5xl px-6 pb-12">
+      {/* Featured case study (ANCHOR CARD) */}
+      <section className="mx-auto max-w-5xl px-6 py-10">
         <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div className="max-w-2xl">
@@ -172,26 +172,31 @@ export default function HomePage() {
                   →
                 </span>
               </Link>
+
+              <p className="text-xs leading-relaxed text-gray-500">
+                Tip: begin met het advies (2–4 pagina’s). De analyse is
+                optioneel als onderbouwing.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Placeholder for other projects */}
-      <section className="mx-auto max-w-5xl px-6 pb-14">
-        <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-          <h2 className="text-lg font-semibold text-gray-900">
-            Andere projecten
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-600">
-            Naast advies- en analysewerk bouw ik ook softwareprojecten. Deze
-            projecten laten zien hoe ik complexe vraagstukken benader, ook
-            buiten het WFM-domein.
-          </p>
+      {/* Other projects (EDITORIAL BLOCKS, no nested cards) */}
+      <section className="mx-auto max-w-5xl px-6 py-10">
+        <h2 className="text-lg font-semibold text-gray-900">
+          Andere projecten
+        </h2>
+        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-600">
+          Naast advies- en analysewerk bouw ik ook softwareprojecten. Deze
+          projecten laten zien hoe ik complexe vraagstukken benader, ook buiten
+          het WFM-domein.
+        </p>
 
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {/* Perfume */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <div className="mt-8 grid gap-8 sm:grid-cols-2">
+          {/* Perfume */}
+          <div className="flex h-full flex-col">
+            <div>
               <h3 className="text-sm font-semibold text-gray-900">Perfume</h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-700">
                 Een full-stack project ontstaan vanuit een praktisch probleem:
@@ -200,18 +205,21 @@ export default function HomePage() {
                 modelleren van ingrediënten, allergenen en formules, en het
                 terugbrengen van complexe regels tot een werkbare interface.
               </p>
-              <div className="mt-4">
-                <Link
-                  href="/perfume"
-                  className="text-sm font-medium text-gray-900 hover:underline"
-                >
-                  Meer over dit project →
-                </Link>
-              </div>
             </div>
 
-            {/* Mahjong */}
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div className="mt-auto pt-4">
+              <Link
+                href="/perfume"
+                className="inline-block text-sm font-medium text-gray-900 hover:underline"
+              >
+                Meer over dit project →
+              </Link>
+            </div>
+          </div>
+
+          {/* Mahjong */}
+          <div className="flex h-full flex-col">
+            <div>
               <h3 className="text-sm font-semibold text-gray-900">Mahjong</h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-700">
                 Een interactief project ontstaan vanuit de behoefte om
@@ -220,14 +228,15 @@ export default function HomePage() {
                 geschiedenis wordt bijgehouden en eenvoudige statistieken
                 inzicht geven in het spelverloop.
               </p>
-              <div className="mt-4">
-                <Link
-                  href="/mahjong"
-                  className="text-sm font-medium text-gray-900 hover:underline"
-                >
-                  Meer over dit project →
-                </Link>
-              </div>
+            </div>
+
+            <div className="mt-auto pt-4">
+              <Link
+                href="/mahjong"
+                className="inline-block text-sm font-medium text-gray-900 hover:underline"
+              >
+                Meer over dit project →
+              </Link>
             </div>
           </div>
         </div>
