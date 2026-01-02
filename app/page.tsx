@@ -209,7 +209,7 @@ export default function HomePage() {
 
             <div className="mt-auto pt-4">
               <Link
-                href="/perfume"
+                href="/projects/perfume"
                 className="inline-block text-sm font-medium text-gray-900 hover:underline"
               >
                 Meer over dit project →
@@ -232,7 +232,7 @@ export default function HomePage() {
 
             <div className="mt-auto pt-4">
               <Link
-                href="/mahjong"
+                href="/projects/mahjong"
                 className="inline-block text-sm font-medium text-gray-900 hover:underline"
               >
                 Meer over dit project →
