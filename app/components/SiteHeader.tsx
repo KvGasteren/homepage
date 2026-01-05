@@ -16,7 +16,7 @@ export function SiteHeader({
   right,
 }: SiteHeaderProps) {
   return (
-    <header className="mx-auto max-w-5xl px-6 py-6">
+    <header className="mx-auto max-w-6xl px-6 py-6">
       <nav className="flex items-center justify-between">
         <Link href={href} className="flex items-center gap-3">
           <div className="h-9 w-9 rounded-2xl bg-gray-900" aria-hidden="true" />

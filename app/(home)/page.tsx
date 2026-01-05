@@ -1,67 +1,73 @@
 // app/page.tsx
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
   title: 'Koen van Gasteren',
   description:
-    'Koen van Gasteren — analyse, organisatie en software. Case study: WFM in de polikliniek.',
+    'Koen van Gasteren - analyse, organisatie en software. Case study: WFM in de polikliniek.',
 }
 
 export default function HomePage() {
+  const container = 'mx-auto max-w-6xl px-6'
+
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero (ANCHOR CARD) */}
-      <section className="mx-auto max-w-5xl px-6 py-10">
-        <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm">
-          <div className="max-w-2xl">
-            <p className="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-medium text-gray-700">
-              Beschikbaar voor analytisch advies en implementatie
-            </p>
-
-            <h1 className="mt-5 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
-              Ik help organisaties complexe keuzes expliciet en werkbaar maken.
+      {/* HERO */}
+      <section className={`${container} py-16`}>
+        <div className="grid items-center gap-12 md:grid-cols-12">
+          {/* Tekst */}
+          <div className="md:col-span-7">
+            <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+              Complexe omgevingen,
+              <br />
+              simpel uitgelegd
             </h1>
 
-            <p className="mt-4 text-base leading-relaxed text-gray-700">
-              Ik ben sterk in het doorgronden van complexe werkomgevingen en het
-              helder uitleggen van wat daar echt gebeurt. In mijn werk combineer
-              ik analyse en software om variatie zichtbaar te maken en keuzes
-              expliciet te maken. Zo help ik organisaties bewust afwegen tussen
-              efficiëntie, werkbaarheid en voorspelbaarheid, in plaats van
-              alleen te sturen op wat op papier klopt.
+            <p className="mt-5 max-w-prose text-lg text-muted-foreground">
+              Ik combineer workforce planning en data-analyse met softwareontwikkeling.
+              Mijn focus: variatie zichtbaar maken, keuzes expliciet maken en teams
+              meenemen in een aanpak die werkt in de praktijk.
             </p>
 
-            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-              
-
-              <a
-                href="mailto:gasteren@gmail.com"
-                className="inline-flex items-center justify-center rounded-2xl border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-              >
-                Neem contact op
-              </a>
-
-              <div className="text-sm text-gray-500">
-                Haarlem • NL •{' '}
-                <span className="whitespace-nowrap">Nederlands / Engels</span>
-              </div>
-            </div>
-
-            {/* Mobile CTA */}
-            <div className="mt-6 sm:hidden">
+            <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/wfm-case-study"
-                className="block w-full rounded-2xl bg-gray-900 px-5 py-3 text-center text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                className="inline-flex items-center rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90"
               >
                 Bekijk WFM case study
               </Link>
+
+              <Link
+                href="/projects"
+                className="inline-flex items-center rounded-xl px-5 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground"
+              >
+                Bekijk projecten
+              </Link>
+            </div>
+          </div>
+
+          {/* Afbeelding */}
+          <div className="md:col-span-5">
+            <div className="mx-auto w-full max-w-sm overflow-hidden rounded-3xl border border-border bg-background shadow-sm">
+              <div className="relative aspect-[4/5]">
+                <Image
+                  src="/images/photo.png"
+                  alt="Portret Koen van Gasteren"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 90vw, 400px"
+                  className="object-cover contrast-150"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-10">
+      {/* PIJLERS */}
+      <section className={`${container} py-12`}>
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <h2 className="text-sm font-semibold text-gray-900">Analyse</h2>
@@ -81,9 +87,7 @@ export default function HomePage() {
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold text-gray-900">
-              Implementatie
-            </h2>
+            <h2 className="text-sm font-semibold text-gray-900">Implementatie</h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">
               Zorgen dat het werkt in de praktijk. Structuur, hulpmiddelen en
               ritme aanbrengen zodat teams kunnen bijsturen zonder ad hoc druk.
@@ -92,7 +96,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-10">
+      {/* UITGELICHTE CASE */}
+      <section className={`${container} py-12`}>
         <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div className="max-w-2xl">
@@ -139,11 +144,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Other projects (EDITORIAL BLOCKS, no nested cards) */}
-      <section className="mx-auto max-w-5xl px-6 py-10">
-        <h2 className="text-lg font-semibold text-gray-900">
-          Andere projecten
-        </h2>
+      {/* ANDERE PROJECTEN */}
+      <section className={`${container} py-12`}>
+        <h2 className="text-lg font-semibold text-gray-900">Andere projecten</h2>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-600">
           Naast advies- en analysewerk bouw ik ook softwareprojecten. Deze
           projecten laten zien hoe ik complexe vraagstukken benader, ook buiten

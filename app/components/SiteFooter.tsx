@@ -9,7 +9,7 @@ type SiteFooterProps = {
 export function SiteFooter({ right }: SiteFooterProps) {
   return (
     <footer className="mt-14 border-t border-gray-200">
-      <div className="mx-auto max-w-5xl px-6 py-8">
+      <div className="mx-auto max-w-6xl px-6 py-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
           <div className="space-y-1">
             <div className="text-sm font-semibold text-gray-900">
