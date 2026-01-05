@@ -16,7 +16,7 @@ export function SiteFooter({ right }: SiteFooterProps) {
               Koen van Gasteren
             </div>
             <div className="text-sm text-gray-500">
-              Workforce planning • Data-analyse • Softwareontwikkeling
+              Analyse • Organisatie • Software
             </div>
           </div>
 
@@ -26,12 +26,6 @@ export function SiteFooter({ right }: SiteFooterProps) {
               className="text-sm font-medium text-gray-700 hover:text-gray-900"
             >
               Home
-            </Link>
-            <Link
-              href="/#projecten"
-              className="text-sm font-medium text-gray-700 hover:text-gray-900"
-            >
-              Projecten
             </Link>
             <a
               href="mailto:gasteren@gmail.com"

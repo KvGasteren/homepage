@@ -11,7 +11,6 @@ import { SiteFooter } from '@/app/components/SiteFooter'
 export default function MahjongProjectPage() {
   return (
     <main className="py-10 sm:py-14">
-      <SiteHeader right={<HomeAndContactActions />} />
       <Container>
         {/* Hero */}
         <header className="space-y-6">
@@ -126,7 +125,7 @@ export default function MahjongProjectPage() {
             title="Ontwerpkeuzes"
             kicker="Hoe ik het heb aangepakt"
           >
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid items-start gap-6 lg:grid-cols-2">
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Dit project is bewust klein gehouden. De uitdaging zat niet in
@@ -166,7 +165,7 @@ export default function MahjongProjectPage() {
             title="Wat dit project laat zien"
             kicker="Relevantie"
           >
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid items-start gap-6 lg:grid-cols-2">
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Mahjong scores was de eerste applicatie die ik publiek op het
@@ -219,7 +218,6 @@ export default function MahjongProjectPage() {
           </Section>
         </div>
       </Container>
-      <SiteFooter />
     </main>
   )
 }

@@ -1,8 +1,8 @@
 // app/wfm-case-study/page.tsx
+import { SiteFooter } from '@/app/components/SiteFooter'
+import { SiteHeader } from '@/app/components/SiteHeader'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { SiteHeader } from '../components/SiteHeader'
-import { SiteFooter } from '../components/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'WFM case study – Polikliniek | Koen van Gasteren',
@@ -13,27 +13,6 @@ export const metadata: Metadata = {
 export default function WfmCaseStudyPage() {
   return (
     <main className="min-h-screen bg-white">
-      <SiteHeader
-        title="WFM case study"
-        subtitle="Polikliniek • Scenario’s • Advies • Onderbouwing"
-        href="/wfm-case-study"
-        right={
-          <>
-            <Link
-              href="/"
-              className="rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-            >
-              ← Terug
-            </Link>
-            <a
-              href="mailto:gasteren@gmail.com"
-              className="hidden rounded-xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 sm:inline-flex"
-            >
-              Contact
-            </a>
-          </>
-        }
-      />
 
       {/* Hero */}
       <section className="mx-auto max-w-5xl px-6 pb-10 pt-4">
@@ -428,8 +407,6 @@ export default function WfmCaseStudyPage() {
           </div>
         </div>
       </section>
-
-      <SiteFooter />
     </main>
   )
 }

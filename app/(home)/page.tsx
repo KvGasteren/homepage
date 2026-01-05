@@ -1,8 +1,6 @@
 // app/page.tsx
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { SiteHeader } from './components/SiteHeader'
-import { SiteFooter } from './components/SiteFooter'
 
 export const metadata: Metadata = {
   title: 'Koen van Gasteren',
@@ -13,20 +11,6 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Top bar */}
-      <SiteHeader
-        right={
-          <div className="hidden items-center gap-2 sm:flex">
-            <Link
-              href="/wfm-case-study"
-              className="rounded-xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-            >
-              Bekijk WFM case study
-            </Link>
-          </div>
-        }
-      />
-
       {/* Hero (ANCHOR CARD) */}
       <section className="mx-auto max-w-5xl px-6 py-10">
         <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm">
@@ -49,15 +33,7 @@ export default function HomePage() {
             </p>
 
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <Link
-                href="/wfm-case-study"
-                className="inline-flex items-center justify-center rounded-2xl bg-gray-900 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-              >
-                WFM case study: polikliniek
-                <span className="ml-2" aria-hidden="true">
-                  →
-                </span>
-              </Link>
+              
 
               <a
                 href="mailto:gasteren@gmail.com"
@@ -85,22 +61,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What I do (EDITORIAL BLOCKS, no cards) */}
       <section className="mx-auto max-w-5xl px-6 py-10">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <h2 className="text-sm font-semibold text-gray-900">Analyse</h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">
-              Instroom, variatie, consultduur, no-shows en uitloop vertalen naar
-              heldere inzichten en scenario’s.
+              Complexe situaties doorgronden. Variatie, onzekerheid en
+              afhankelijkheden vertalen naar inzichten die laten zien waar het
+              echt knelt.
             </p>
           </div>
 
           <div>
             <h2 className="text-sm font-semibold text-gray-900">Advies</h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">
-              Keuzes expliciet maken: buffers, werkbaarheid, voorspelbaarheid en
-              dienstverlening. Inclusief concrete aanbevelingen.
+              Keuzes expliciet maken. Afwegingen rond capaciteit, buffers en
+              voorspelbaarheid concreet maken en bespreekbaar krijgen.
             </p>
           </div>
 
@@ -109,14 +85,13 @@ export default function HomePage() {
               Implementatie
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">
-              Van aanpak naar uitvoering: dashboards, processen, rituelen en
-              tooling die teams helpen bijsturen.
+              Zorgen dat het werkt in de praktijk. Structuur, hulpmiddelen en
+              ritme aanbrengen zodat teams kunnen bijsturen zonder ad hoc druk.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Featured case study (ANCHOR CARD) */}
       <section className="mx-auto max-w-5xl px-6 py-10">
         <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
@@ -159,11 +134,6 @@ export default function HomePage() {
                   →
                 </span>
               </Link>
-
-              <p className="text-xs leading-relaxed text-gray-500">
-                Tip: begin met het advies (2–4 pagina’s). De analyse is
-                optioneel als onderbouwing.
-              </p>
             </div>
           </div>
         </div>
@@ -182,7 +152,7 @@ export default function HomePage() {
 
         <div className="mt-8 grid gap-8 sm:grid-cols-2">
           {/* Perfume */}
-          <div className="flex h-full flex-col">
+          <div className="flex h-full flex-col bg-gray-50 px-6 py-10">
             <div>
               <h3 className="text-sm font-semibold text-gray-900">Perfume</h3>
               <p className="mt-2 text-sm leading-relaxed text-gray-700">
@@ -205,7 +175,7 @@ export default function HomePage() {
           </div>
 
           {/* Mahjong */}
-          <div className="flex h-full flex-col">
+          <div className="flex h-full flex-col bg-gray-50 px-6 py-10">
             <div>
               <h3 className="text-sm font-semibold text-gray-900">
                 Mahjong Scores
@@ -230,8 +200,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <SiteFooter />
     </main>
   )
 }
