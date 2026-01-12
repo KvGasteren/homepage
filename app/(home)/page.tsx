@@ -1,16 +1,16 @@
 // app/page.tsx
-import type { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: 'Koen van Gasteren',
+  title: "Koen van Gasteren",
   description:
-    'Koen van Gasteren - analyse, organisatie en software. Case study: WFM in de polikliniek.',
-}
+    "Koen van Gasteren - analyse, organisatie en software. Case study: WFM in de polikliniek.",
+};
 
 export default function HomePage() {
-  const container = 'mx-auto max-w-6xl px-6'
+  const container = "mx-auto max-w-6xl px-6";
 
   return (
     <main className="min-h-screen bg-white">
@@ -26,32 +26,20 @@ export default function HomePage() {
             </h1>
 
             <p className="mt-5 max-w-prose text-lg text-muted-foreground">
-              Ik combineer workforce planning en data-analyse met softwareontwikkeling.
-              Mijn focus: variatie zichtbaar maken, keuzes expliciet maken en teams
-              meenemen in een aanpak die werkt in de praktijk.
+              Ik ben iemand die graag uitzoekt hoe dingen echt werken. Ik
+              analyseer graag, maar minstens zo belangrijk vind ik het om
+              ingewikkelde materie simpel en begrijpelijk te maken. Of het nu
+              gaat om software, processen of data: ik haal plezier uit het
+              puzzelen tot het klopt. Mijn vrije tijd besteed ik aan
+              verschillende ambachtelijke hobby&apos;s. Met aandacht voor detail,
+              veel geduld en een oog voor kwaliteit.
             </p>
-
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/wfm-case-study"
-                className="inline-flex items-center rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground hover:bg-primary/90"
-              >
-                Bekijk WFM case study
-              </Link>
-
-              <Link
-                href="/projects"
-                className="inline-flex items-center rounded-xl px-5 py-2.5 text-sm font-medium text-muted-foreground hover:text-foreground"
-              >
-                Bekijk projecten
-              </Link>
-            </div>
           </div>
 
           {/* Afbeelding */}
           <div className="md:col-span-5">
             <div className="mx-auto w-full max-w-sm overflow-hidden rounded-3xl border border-border bg-background shadow-sm">
-              <div className="relative aspect-[4/5]">
+              <div className="relative aspect-4/5">
                 <Image
                   src="/images/photo.png"
                   alt="Portret Koen van Gasteren"
@@ -70,27 +58,35 @@ export default function HomePage() {
       <section className={`${container} py-12`}>
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <h2 className="text-sm font-semibold text-gray-900">Analyse</h2>
+            <h2 className="text-sm font-semibold text-gray-900">
+              Analyse en overzicht
+            </h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">
-              Complexe situaties doorgronden. Variatie, onzekerheid en
-              afhankelijkheden vertalen naar inzichten die laten zien waar het
-              echt knelt.
+              Ik haal plezier uit het doorgronden van complexe vraagstukken en
+              het aanbrengen van structuur. Ik wil snappen hoe iets in elkaar
+              zit, waar knelpunten ontstaan en wat er echt toe doet.
             </p>
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold text-gray-900">Advies</h2>
+            <h2 className="text-sm font-semibold text-gray-900">
+              Helder uitleggen
+            </h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">
-              Keuzes expliciet maken. Afwegingen rond capaciteit, buffers en
-              voorspelbaarheid concreet maken en bespreekbaar krijgen.
+              Ik ben sterk in het vertalen van technische of abstracte materie
+              naar iets begrijpbaars. Voor collega&apos;s, stakeholders of
+              gebruikers, zonder het probleem plat te slaan.
             </p>
           </div>
 
           <div>
-            <h2 className="text-sm font-semibold text-gray-900">Implementatie</h2>
+            <h2 className="text-sm font-semibold text-gray-900">
+              Plezier in uitvogelen
+            </h2>
             <p className="mt-2 text-sm leading-relaxed text-gray-700">
-              Zorgen dat het werkt in de praktijk. Structuur, hulpmiddelen en
-              ritme aanbrengen zodat teams kunnen bijsturen zonder ad hoc druk.
+              Ik werk graag zorgvuldig en met aandacht. Of het nu code, data of
+              een proces is, ik zoek graag door tot het klopt en beter kan dan
+              eerst gedacht.
             </p>
           </div>
         </div>
@@ -99,54 +95,79 @@ export default function HomePage() {
       {/* UITGELICHTE CASE */}
       <section className={`${container} py-12`}>
         <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-          <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-            <div className="max-w-2xl">
+          <div className="space-y-6">
+            {/* Header */}
+            <div>
               <h2 className="text-xl font-semibold tracking-tight text-gray-900">
                 Uitgelichte case study
               </h2>
-              <p className="mt-2 text-sm leading-relaxed text-gray-700">
-                <span className="font-medium text-gray-900">
-                  WFM in de polikliniek:
-                </span>{' '}
-                wachttijd omlaag, roosterstress omlaag. Met transparante
-                aannames en scenario’s. Inclusief adviesrapport en onderbouwing
-                in een statisch (HTML) notebook.
+              <p className="mt-1 text-sm text-gray-600">
+                WFM in de polikliniek
               </p>
-
-              <ul className="mt-4 space-y-2 text-sm text-gray-700">
-                <li className="flex gap-2">
-                  <span className="mt-0.5 h-2 w-2 flex-none rounded-full bg-gray-900" />
-                  3 scenario’s: strak, werkbaar, slimme buffer
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-0.5 h-2 w-2 flex-none rounded-full bg-gray-900" />
-                  Metrics: wachttijd, uitloop & benutting (proxy’s)
-                </li>
-                <li className="flex gap-2">
-                  <span className="mt-0.5 h-2 w-2 flex-none rounded-full bg-gray-900" />
-                  Advies in zorgtaal, met eerste stappen voor implementatie
-                </li>
-              </ul>
             </div>
 
-            <div className="flex flex-col gap-3 md:min-w-[240px]">
-              <Link
-                href="/wfm-case-study"
-                className="inline-flex items-center justify-center rounded-2xl bg-gray-900 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
-              >
-                Open case study
-                <span className="ml-2" aria-hidden="true">
-                  →
-                </span>
-              </Link>
+            {/* Content */}
+            <div className="grid gap-8 md:grid-cols-12">
+              {/* Tekst */}
+              <div className="md:col-span-7 space-y-4 text-sm leading-relaxed text-gray-700">
+                <p>
+                  Dit is een fictieve case study, waarmee ik mijn manier van
+                  werken wil laten zien. In deze case onderzoek ik hoe workforce
+                  management (het plannen en inzetten van personeel) kan helpen
+                  om wachttijden in een polikliniek te beperken en de werkdruk
+                  voor artsen en assistenten voorspelbaar te houden.
+                </p>
+
+                <p>
+                  De case vergelijkt verschillende planningsscenario&apos;s op basis
+                  van expliciete aannames, gesimuleerde data en heldere keuzes.
+                  Ik heb een adviesrapport opgesteld om de bevindingen over te
+                  brengen naar een managementlaag. De analyse is gedocumenteerd
+                  in een Python notebook, bedoeld als onderbouwing van het
+                  advies.
+                </p>
+              </div>
+
+              {/* Rechterkolom */}
+              <div className="md:col-span-5 flex flex-col gap-6 relative">
+                {/* Bullets */}
+                <ul className="space-y-2 text-sm text-gray-700 md:pb-16">
+                  <li className="flex gap-2">
+                    <span className="mt-1.5 h-2 w-2 flex-none rounded-full bg-gray-900" />
+                    3 scenario&apos;s: strak, werkbaar, slimme buffer
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="mt-1.5 h-2 w-2 flex-none rounded-full bg-gray-900" />
+                    Metrics: wachttijd, uitloop en benutting (proxy&apos;s)
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="mt-1.5 h-2 w-2 flex-none rounded-full bg-gray-900" />
+                    Advies in zorgtaal, met eerste stappen voor implementatie
+                  </li>
+                </ul>
+                {/* CTA */}
+                <div className="mt-6 md:mt-0 md:absolute md:bottom-6 md:right-6">
+                  <Link
+                    href="/wfm-case-study"
+                    className="inline-flex items-center justify-center rounded-2xl bg-gray-900 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
+                  >
+                    Open case study
+                    <span className="ml-2" aria-hidden="true">
+                      →
+                    </span>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ANDERE PROJECTEN */}
-      <section className={`${container} py-12`}>
-        <h2 className="text-lg font-semibold text-gray-900">Andere projecten</h2>
+      <section id="projects" className={`${container} py-12`}>
+        <h2 className="text-lg font-semibold text-gray-900">
+          Andere projecten
+        </h2>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-gray-600">
           Naast advies- en analysewerk bouw ik ook softwareprojecten. Deze
           projecten laten zien hoe ik complexe vraagstukken benader, ook buiten
@@ -204,5 +225,5 @@ export default function HomePage() {
         </div>
       </section>
     </main>
-  )
+  );
 }
