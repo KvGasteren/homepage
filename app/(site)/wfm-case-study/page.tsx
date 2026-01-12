@@ -106,7 +106,7 @@ export default function WfmCaseStudyPage() {
                 1) Advies (PDF)
               </div>
               <p className="mt-2 text-sm leading-relaxed text-gray-700">
-                Kort rapport (2–4 pagina’s) met bevindingen, scenario’s en
+                Kort rapport met bevindingen, scenario’s en
                 aanbevelingen. Dit is het primaire deliverable.
               </p>
             </div>
