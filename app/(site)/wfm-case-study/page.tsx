@@ -44,7 +44,7 @@ export default function WfmCaseStudyPage() {
             </a>
 
             <a
-              href="/downloads/wfm-poli-analyse.html"
+              href="/downloads/polikliniek.html"
               className="inline-flex items-center justify-center rounded-2xl border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
             >
               Bekijk de analyse (HTML notebook)
@@ -366,7 +366,7 @@ export default function WfmCaseStudyPage() {
             </a>
 
             <a
-              href="/downloads/wfm-poli-analyse.html"
+              href="/downloads/polikliniek.html"
               className="inline-flex items-center justify-center rounded-2xl border border-gray-200 bg-white px-5 py-3 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2"
             >
               Analyse (HTML)
